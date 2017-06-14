@@ -1,4 +1,4 @@
-require 'minitest/autorun'
+require_relative 'test_helper'
 
 class WhereTest < Minitest::Test
   def setup
@@ -11,7 +11,7 @@ class WhereTest < Minitest::Test
   end
 
   def test_where_with_exact_match
-    assert_equal [@wolf], @fixtures.where(:name => 'The Wolf'),
+    assert_equal [@wolf], @fixtures.where(:name => 'The Wolf')
   end
 
   def test_where_with_partial_match
@@ -21,7 +21,7 @@ class WhereTest < Minitest::Test
   def test_where_with_mutliple_exact_results
     assert_equal [@boris, @wolf], @fixtures.where(:rank => 4)
   end
-
+  
   def test_with_with_multiple_criteria
     assert_equal [@wolf], @fixtures.where(:rank => 4, :quote => /get/)
   end
@@ -30,4 +30,3 @@ class WhereTest < Minitest::Test
     assert_equal [@charles], @fixtures.where(:quote => /if/i).where(:rank => 3)
   end
 end
-

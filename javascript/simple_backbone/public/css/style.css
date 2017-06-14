@@ -1,0 +1,44 @@
+*{
+  color: #292b2c;
+  font-family: "Lucida Bright", serif;
+}
+#container{
+  padding:0 20px;
+}
+#quotes {
+  text-align: left;
+  padding:0 20px
+
+}
+#quotes tr td, th {
+  padding: 10px 15px;
+  min-width: 125px;
+  vertical-align: text-top;
+  border: 1px #adadad solid;
+}
+#quotes tr th {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#forward, #backward {
+  border: 1px grey solid;
+  border-radius: 5px;
+  display: inline-flex;
+  padding: 10px 30px;
+  margin: 0 2px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#page-range {
+  display: inline-flex;
+}
+#forward a, #backward a {
+  color: #fff;
+}
+#forward {
+  background-color: #025aa5;
+}
+#backward {
+  background-color: #449d44;
+}

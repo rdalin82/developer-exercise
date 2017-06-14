@@ -2,11 +2,30 @@
                     "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+  <link rel="stylesheet" href="public/css/style.css">
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+  <script type="text/javascript" src="public/javascript/script.js"></script>
 </head>
 <body>
-
+  <div id="container">
+  </div>
+  <table id="quotes">
+    <tr>
+      <th>Source</th>
+      <th>Context</th>
+      <th>Theme</th>
+      <th>Quote</th>
+    </tr>
+    <script type="text/html" id="quote-template">
+      <tr>
+        <td><%= source %></td>
+        <td><%= context %></td>
+        <td><%= theme %></td>
+        <td><%= quote %></td>
+      </tr>
+    </script>
+  </table>
 </body>
 </html>
